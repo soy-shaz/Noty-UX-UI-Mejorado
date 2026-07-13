@@ -185,3 +185,26 @@ Este proyecto evita frameworks de frontend para que sea mas facil estudiar:
 ## Nota de seguridad
 
 Noty esta pensado para aprendizaje. Para produccion se recomienda agregar validaciones mas estrictas, sanitizacion HTML avanzada, cookies httpOnly, HTTPS obligatorio, gestion robusta de errores y una estrategia formal de migraciones de base de datos.
+
+## Mejoras implementadas (Entrega 1 - UX/UI)
+
+Como parte del curso de Programación Web, esta versión de Noty fue mejorada aplicando principios de User Experience (UX) y User Interface (UI).
+
+### Mejoras de UX
+
+- Creación de notas mediante un modal para simplificar el flujo de trabajo.
+- Buscador de notas por título y contenido.
+- Confirmación contextual al eliminar una nota mostrando su nombre.
+- Indicador visual del estado de guardado (sin cambios, cambios pendientes y nota guardada).
+- Enlace "¿Olvidaste tu contraseña?" con modal informativo sobre la funcionalidad prevista en una versión de producción.
+
+### Mejoras de UI
+
+- Rediseño del dashboard con una organización visual más clara.
+- Tarjetas de notas con vista previa del contenido y mejor jerarquía visual.
+- Barra de herramientas más intuitiva y consistente.
+- Landing page renovada con información sobre las principales funcionalidades.
+- Mejoras de responsividad para dispositivos móviles.
+- Exportación a PDF con encabezado, fecha de actualización y pie de página.
+
+Estas mejoras fueron desarrolladas manteniendo la arquitectura original del proyecto y respetando su propósito educativo.
