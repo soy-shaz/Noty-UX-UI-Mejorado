@@ -3,26 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar sesion | Noty</title>
+  <title>Iniciar sesión | Noty</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="auth-page">
   <main class="auth-card">
-    <a class="brand-link" href="index.html">Noty</a>
-    <h1>Iniciar sesion</h1>
+    <a class="brand-link" href="index.html" aria-label="Volver al inicio de Noty">
+      Noty
+    </a>
+
+    <div class="auth-heading">
+      <p class="eyebrow">Bienvenido de vuelta</p>
+      <h1>Iniciar sesión</h1>
+      <p>
+        Accede a tus notas y continúa organizando tus ideas.
+      </p>
+    </div>
+
     <form id="loginForm" class="form">
-      <label for="email">Correo electronico</label>
-      <input id="email" name="email" type="email" autocomplete="email" required>
+      <label for="email">Correo electrónico</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        placeholder="nombre@correo.com"
+        required
+      >
 
-      <label for="password">Contrasena</label>
-      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <div class="password-label-row">
+        <label for="password">Contraseña</label>
 
-      <button class="button primary" type="submit">Entrar</button>
-      <p id="message" class="message" role="status"></p>
+        <button
+          id="forgotPasswordButton"
+          class="text-button"
+          type="button"
+        >
+          ¿Olvidaste tu contraseña?
+        </button>
+      </div>
+
+      <input
+        id="password"
+        name="password"
+        type="password"
+        autocomplete="current-password"
+        placeholder="Ingresa tu contraseña"
+        required
+      >
+
+      <button class="button primary full-width auth-submit-button" type="submit">
+        Entrar a Noty
+      </button>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
     </form>
-    <p class="auth-switch">No tienes cuenta? <a href="register.html">Registrate</a></p>
+
+    <p class="auth-switch">
+      ¿No tienes una cuenta?
+      <a href="register.html">Regístrate</a>
+    </p>
   </main>
-  <script src="js/api.js?v=4"></script>
-  <script src="js/auth.js?v=4"></script>
+
+  <!-- Modal informativo de recuperación de contraseña -->
+  <div
+    id="forgotPasswordModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="forgotPasswordModalTitle"
+    hidden
+  >
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">Recuperación de acceso</p>
+          <h2 id="forgotPasswordModalTitle">
+            ¿Olvidaste tu contraseña?
+          </h2>
+        </div>
+
+        <button
+          class="modal-close"
+          type="button"
+          data-close-modal="forgotPasswordModal"
+          aria-label="Cerrar"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="forgot-password-content">
+        <div class="information-icon" aria-hidden="true">i</div>
+
+        <p>
+          Esta funcionalidad aún no está disponible en la versión educativa
+          de Noty.
+        </p>
+
+        <p>
+          En una versión de producción, el sistema enviaría al correo
+          electrónico registrado un enlace seguro y temporal para crear una
+          nueva contraseña.
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <button
+          class="button primary"
+          type="button"
+          data-close-modal="forgotPasswordModal"
+        >
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js?v=5"></script>
+  <script src="js/auth.js?v=5"></script>
 </body>
 </html>
